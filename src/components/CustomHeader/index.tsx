@@ -1,38 +1,21 @@
-import {
-  View,
-  Text,
-  SafeAreaView,
-  StyleSheet,
-  Pressable,
-  Image,
-} from 'react-native';
-import styles from './index.styles';
 import { DrawerHeaderProps } from '@react-navigation/drawer';
+import { Pressable, SafeAreaView } from 'react-native';
+import * as S from './index.styles';
 
 const CustomHeader = ({ options, navigation }: DrawerHeaderProps) => {
   return (
     <SafeAreaView>
-      <View style={styles.container}>
+      <S.Container>
         <Pressable
-          onPress={() => {
-            navigation.openDrawer();
-          }}
-          style={({ pressed }) => [pressed && styles.tabButtonHover]}
+          onPress={() => navigation.openDrawer()}
+          style={({ pressed }) => [pressed && { opacity: 0.7 }]}
         >
-          <Image
-            source={require('../../../assets/images/tab.png')}
-            style={styles.tabImage}
-          />
+          <S.TabImage source={require('../../../assets/images/tab.png')} />
         </Pressable>
-
-        <Text style={styles.title}>Write My Line</Text>
-      </View>
+        <S.Title>Write My Line</S.Title>
+      </S.Container>
     </SafeAreaView>
   );
 };
-
-const style = StyleSheet.create({
-  container: { backgroundColor: 'red', fontSize: 16, color: 'black' },
-});
 
 export default CustomHeader;

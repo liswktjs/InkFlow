@@ -1,27 +1,21 @@
-import { colors } from '@/src/style/color';
-import { StyleSheet } from 'react-native';
+import styled from '@emotion/native';
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    width: '100%',
-    backgroundColor: colors.primary,
-    padding: 8,
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  tabImage: {
-    width: 24,
-    height: 24,
-  },
-  tabButtonHover: {
-    opacity: 0.7,
-  },
+export const Container = styled.View`
+  flex-direction: row;
+  background-color: ${({ theme }) => theme.colors.primary};
 
-  title: {
-    fontSize: 20,
-    color: colors.background,
-  },
-});
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+`;
 
-export default styles;
+export const TabImage = styled.Image`
+  width: 24px;
+  height: 24px;
+`;
+
+export const Title = styled.Text`
+  font-size: 20px;
+  color: ${({ theme }) => theme.colors.background};
+`;
