@@ -5,3 +5,11 @@ export const colors = {
   text: '#202124',
   accent: '#48D1CC',
 };
+
+const theme = {
+  colors,
+} as const;
+
+export type ThemeType = typeof theme;
+
+export default theme;
