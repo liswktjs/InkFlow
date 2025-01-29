@@ -10,8 +10,8 @@ interface Props {
 
 const CircleLabelItem = ({ title, circleText, subText, onPress }: Props) => {
   return (
-    <TouchableOpacity activeOpacity={0.7}>
-      <S.Container onPress={onPress}>
+    <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
+      <S.Container>
         <S.Circle>
           <S.CircleText>{circleText}</S.CircleText>
         </S.Circle>
