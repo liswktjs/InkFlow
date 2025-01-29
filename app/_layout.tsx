@@ -17,9 +17,10 @@ export default function RootLayout() {
               },
               drawerLabelStyle: {
                 fontSize: 16,
+                color: colors.text,
               },
               drawerActiveTintColor: colors.background,
-              drawerActiveBackgroundColor: colors.accent,
+              drawerActiveBackgroundColor: colors.pink,
             }}
           >
             <Drawer.Screen
