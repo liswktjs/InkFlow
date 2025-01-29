@@ -1,9 +1,10 @@
-import QueryProvider from '../src/provider/QueryProvider';
-import CustomHeader from '@/src/components/CustomHeader';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Drawer } from 'expo-router/drawer';
-import theme, { colors } from '@/src/style/theme';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ThemeProvider } from '@emotion/react';
+
+import QueryProvider from '../src/provider/QueryProvider';
+import CustomHeader from '../src/components/CustomHeader';
+import theme, { colors } from '../src/style/theme';
 
 export default function RootLayout() {
   return (
