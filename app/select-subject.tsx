@@ -1,6 +1,6 @@
 import { useRouter } from 'expo-router';
 import styled from '@emotion/native';
-import SubjectItem from '@/src/SelectSubject/components/SubjectItem';
+import SubjectItem from '@/src/pages/SelectSubject/components/SubjectItem';
 
 const Container = styled.View`
   flex: 1;

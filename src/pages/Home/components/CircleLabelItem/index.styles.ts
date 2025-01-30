@@ -1,4 +1,3 @@
-import theme from '@/src/style/theme';
 import styled from '@emotion/native';
 
 export const Container = styled.View`
@@ -9,7 +8,7 @@ export const Container = styled.View`
   padding: 10px;
   width: 100%;
   margin-bottom: 10px;
-  background-color: ${theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 export const Circle = styled.View`

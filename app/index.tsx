@@ -1,6 +1,6 @@
+import CircleLabelItem from '@/src/pages/Home/components/CircleLabelItem';
+import WriteCTASection from '@/src/pages/Home/components/WriteCTASection';
 import styled from '@emotion/native';
-import CircleLabelItem from '../src/Home/components/CircleLabelItem';
-import WriteCTASection from '@/src/Home/components/WriteCTASection';
 
 const Container = styled.View`
   flex: 1;

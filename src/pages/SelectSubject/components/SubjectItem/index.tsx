@@ -1,6 +1,6 @@
+import { PropsWithChildren } from 'react';
 import { Pressable } from 'react-native';
 import * as S from './index.styles';
-import { PropsWithChildren } from 'react';
 
 interface Props {
   onPress: () => void;
