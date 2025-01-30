@@ -8,7 +8,12 @@ interface Props {
 
 const SubjectItem = ({ children, onPress }: PropsWithChildren<Props>) => {
   return (
-    <Pressable onPress={onPress}>
+    <Pressable
+      onPress={onPress}
+      style={{
+        marginBottom: 10,
+      }}
+    >
       {({ pressed }) => (
         <S.Container pressed={pressed}>
           <S.Description>{children}</S.Description>
