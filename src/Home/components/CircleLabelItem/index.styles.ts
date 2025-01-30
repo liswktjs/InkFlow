@@ -1,7 +1,7 @@
 import theme from '@/src/style/theme';
 import styled from '@emotion/native';
 
-export const Container = styled.Pressable`
+export const Container = styled.View`
   flex-direction: row;
   gap: 10px;
   align-items: center;

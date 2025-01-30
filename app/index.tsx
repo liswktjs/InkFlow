@@ -11,16 +11,30 @@ const ListWrapper = styled.ScrollView`
   flex-direction: column;
 
   width: 100%;
-  height: 500px;
   padding: 10px;
-  column-gap: 10px;
 `;
 
 export default function Index() {
   return (
     <Container>
       <WriteCTASection />
-      <ListWrapper horizontal={false}>
+      <ListWrapper>
+        <CircleLabelItem
+          circleText="월"
+          title="필사 문구 "
+          subText="2025.01.29"
+          onPress={() => {
+            console.log('work');
+          }}
+        />
+        <CircleLabelItem
+          circleText="월"
+          title="필사 문구 "
+          subText="2025.01.29"
+          onPress={() => {
+            console.log('work');
+          }}
+        />
         <CircleLabelItem
           circleText="월"
           title="필사 문구 "
