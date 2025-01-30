@@ -1,20 +1,35 @@
-import { Text, View } from "react-native";
-import styled from '@emotion/native'
+import styled from '@emotion/native';
+import CircleLabelItem from '../src/Home/components/CircleLabelItem';
+import WriteCTASection from '@/src/Home/components/WriteCTASection';
 
 const Container = styled.View`
-  background-color: blue;
-`
+  flex: 1;
+  align-items: center;
+`;
+
+const ListWrapper = styled.ScrollView`
+  flex-direction: column;
+
+  width: 100%;
+  height: 500px;
+  padding: 10px;
+  column-gap: 10px;
+`;
 
 export default function Index() {
   return (
-    <Container
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <Container>
+      <WriteCTASection />
+      <ListWrapper horizontal={false}>
+        <CircleLabelItem
+          circleText="월"
+          title="필사 문구 "
+          subText="2025.01.29"
+          onPress={() => {
+            console.log('work');
+          }}
+        />
+      </ListWrapper>
     </Container>
   );
 }
