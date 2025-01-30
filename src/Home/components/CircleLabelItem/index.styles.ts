@@ -9,7 +9,7 @@ export const Container = styled.Pressable`
   padding: 10px;
   width: 100%;
   margin-bottom: 10px;
-  background-color: ${theme.colors.third};
+  background-color: ${theme.colors.primary};
 `;
 
 export const Circle = styled.View`
@@ -18,12 +18,12 @@ export const Circle = styled.View`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.yellow};
 `;
 
 export const CircleText = styled.Text`
   font-size: 20px;
-  color: ${({ theme }) => theme.colors.yellow};
+  color: ${({ theme }) => theme.colors.primary_500};
   font-weight: bold;
 `;
 
@@ -34,7 +34,7 @@ export const ContentWrapper = styled.View`
 
 export const Title = styled.Text`
   font-size: 16px;
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.text};
   font-weight: bold;
 `;
 

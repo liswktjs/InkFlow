@@ -14,14 +14,17 @@ export default function RootLayout() {
           <Drawer
             screenOptions={{
               drawerStyle: {
-                backgroundColor: colors.background,
+                backgroundColor: colors.white,
               },
               drawerLabelStyle: {
-                fontSize: 16,
+                fontSize: 18,
                 color: colors.text,
+                fontWeight: 800,
               },
-              drawerActiveTintColor: colors.background,
-              drawerActiveBackgroundColor: colors.pink,
+              drawerActiveTintColor: colors.primary,
+              sceneStyle: {
+                backgroundColor: colors.background,
+              },
             }}
           >
             <Drawer.Screen
@@ -34,6 +37,7 @@ export default function RootLayout() {
             <Drawer.Screen
               name="select-subject"
               options={{
+                header: CustomHeader,
                 title: '주제 고르기',
               }}
             />

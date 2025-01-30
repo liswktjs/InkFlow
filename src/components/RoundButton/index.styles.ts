@@ -1,7 +1,7 @@
 import styled from '@emotion/native';
 
 export const PressableContainer = styled.Pressable`
-  background-color: ${(props) => props.theme.colors.primary_500};
+  background-color: ${(props) => props.theme.colors.primary};
   border-radius: 16px;
   justify-content: center;
   align-items: center;
