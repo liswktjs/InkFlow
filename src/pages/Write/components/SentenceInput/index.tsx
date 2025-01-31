@@ -8,7 +8,7 @@ interface Props {
 const SentenceInput = ({ text, onTextChange }: Props) => {
   return (
     <S.Container>
-      <S.TextInputWrapper
+      <S.CustomTextInput
         value={text}
         onChangeText={onTextChange}
         multiline
