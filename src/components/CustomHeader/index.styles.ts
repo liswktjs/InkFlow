@@ -7,17 +7,15 @@ export const Container = styled.View`
   padding: 10px;
 `;
 
-export const TabLabel = styled.Pressable`
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: ${({ theme }) => theme.colors.primary};
-
+export const TabLabel = styled.View<{ pressed: boolean }>`
   justify-content: center;
   align-items: center;
-`;
 
-export const TabImage = styled.Image`
-  width: 24px;
-  height: 24px;
+  border-radius: 50%;
+  padding: 4px;
+
+  ${(props) =>
+    props.pressed && {
+      backgroundColor: props.theme.colors.secondary,
+    }}
 `;

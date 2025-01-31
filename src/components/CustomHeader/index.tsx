@@ -1,20 +1,24 @@
-import { SafeAreaView } from 'react-native';
+import { Pressable, SafeAreaView } from 'react-native';
 import { DrawerHeaderProps } from '@react-navigation/drawer';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import Icon from 'react-native-vector-icons/Ionicons';
+import theme from '@/src/style/theme';
 import * as S from './index.styles';
 
-const CustomHeader = ({ options, navigation }: DrawerHeaderProps) => {
+const CustomHeader = ({ navigation }: DrawerHeaderProps) => {
   return (
     <SafeAreaView>
       <S.Container>
-        <TouchableOpacity
-          activeOpacity={0.7}
-          onPress={() => navigation.openDrawer()}
-        >
-          <S.TabLabel>
-            <S.TabImage source={require('../../../assets/images/tab.png')} />
-          </S.TabLabel>
-        </TouchableOpacity>
+        <Pressable onPress={() => navigation.openDrawer()}>
+          {({ pressed }) => (
+            <S.TabLabel pressed={pressed}>
+              <Icon
+                name="menu-outline"
+                size={30}
+                color={theme.colors.primary}
+              />
+            </S.TabLabel>
+          )}
+        </Pressable>
       </S.Container>
     </SafeAreaView>
   );
