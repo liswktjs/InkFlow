@@ -4,6 +4,7 @@ import { ThemeProvider } from '@emotion/react';
 
 import QueryProvider from '../src/provider/QueryProvider';
 import CustomHeader from '../src/components/CustomHeader';
+import BackArrowHeader from '@/src/components/BackArrowHeader';
 import theme, { colors } from '../src/style/theme';
 
 export default function RootLayout() {
@@ -39,6 +40,13 @@ export default function RootLayout() {
               options={{
                 header: CustomHeader,
                 title: '주제 고르기',
+              }}
+            />
+            <Drawer.Screen
+              name="write/[id]"
+              options={{
+                header: BackArrowHeader,
+                drawerItemStyle: { display: 'none' },
               }}
             />
           </Drawer>
