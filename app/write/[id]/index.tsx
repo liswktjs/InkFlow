@@ -1,5 +1,5 @@
-import { useLocalSearchParams } from 'expo-router';
-import { Keyboard, SafeAreaView, View } from 'react-native';
+import { router, useLocalSearchParams } from 'expo-router';
+import { Keyboard, Modal, SafeAreaView, View, Text } from 'react-native';
 import { useState } from 'react';
 
 import SentenceInput from '@/src/pages/Write/components/SentenceInput';
@@ -14,6 +14,12 @@ const WriteSentencePage = () => {
   const [textValue, setTextValue] = useState('');
 
   const isSame = textValue.trim() == MOCK_SENTENCE.trim();
+
+  const onSubmitButtonPress = () => {
+    Keyboard.dismiss();
+    setTextValue('');
+    router.push(`/write/${id}/done`);
+  };
 
   return (
     <SafeAreaView style={{ alignItems: 'center' }}>
@@ -33,7 +39,7 @@ const WriteSentencePage = () => {
             width: '80%',
           }}
         >
-          <RoundButton onPress={() => Keyboard.dismiss()}>기록하기</RoundButton>
+          <RoundButton onPress={onSubmitButtonPress}>기록하기</RoundButton>
         </View>
       )}
     </SafeAreaView>
