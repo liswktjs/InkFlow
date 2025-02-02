@@ -24,6 +24,8 @@ const patchSentenceItem = async ({
     }),
   });
 
+  if (!response.ok) throw Error('fail to update sentence');
+
   return response.json();
 };
 

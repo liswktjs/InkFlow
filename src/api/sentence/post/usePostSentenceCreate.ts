@@ -26,6 +26,8 @@ const postSentenceCreate = async ({
     }),
   });
 
+  if (!response.ok) throw Error('fail to create sentence');
+
   return response.json();
 };
 
