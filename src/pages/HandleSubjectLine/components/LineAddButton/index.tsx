@@ -10,7 +10,7 @@ interface Props {
 const LineAddButton = ({ onPress }: Props) => {
   return (
     <S.Container>
-      <Pressable>
+      <Pressable onPress={onPress}>
         {({ pressed }) => (
           <S.IconWrapper pressed={pressed}>
             <Icon name="add" size={55} color={theme.colors.white} />
