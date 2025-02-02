@@ -1,6 +1,6 @@
 export interface RecordItemType {
   id: string;
-  sentenceId: number;
+  sentenceId: string;
   createdAt: string;
   sentence: string;
 }
