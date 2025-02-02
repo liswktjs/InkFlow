@@ -43,10 +43,40 @@ export default function RootLayout() {
               }}
             />
             <Drawer.Screen
-              name="write/[id]"
+              name="write/[id]/index"
               options={{
                 header: BackArrowHeader,
                 drawerItemStyle: { display: 'none' },
+              }}
+            />
+            <Drawer.Screen
+              name="write/[id]/done"
+              options={{
+                header: BackArrowHeader,
+                drawerItemStyle: { display: 'none' },
+              }}
+            />
+            <Drawer.Screen
+              name="handle-line"
+              options={{
+                header: CustomHeader,
+                title: '문장 다루기',
+              }}
+            />
+            <Drawer.Screen
+              name="subject/[id]/index"
+              options={{
+                header: BackArrowHeader,
+                drawerItemStyle: { display: 'none' },
+              }}
+            />
+            <Drawer.Screen
+              name="subject/[id]/add"
+              options={{
+                header: BackArrowHeader,
+                drawerItemStyle: {
+                  display: 'none',
+                },
               }}
             />
           </Drawer>
