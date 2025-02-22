@@ -1,6 +1,5 @@
-import { useRouter } from 'expo-router';
 import styled from '@emotion/native';
-import SubjectItem from '../src/components/SubjectItem';
+import SubjectList from '@/src/pages/SelectSubject/components/SubjectList';
 
 const Container = styled.View`
   flex: 1;
@@ -24,25 +23,13 @@ const SubjectListWrapper = styled.ScrollView`
 `;
 
 const SelectSubjectPage = () => {
-  const router = useRouter();
-
-  const onSubjectItemPress = (id?: number) => {
-    router.push(`/write/${id}`);
-  };
-
   return (
     <Container>
       <TitleWrapper>
         <Title>오늘의 주제를 골라봐요</Title>
       </TitleWrapper>
       <SubjectListWrapper>
-        <SubjectItem
-          onPress={() => {
-            onSubjectItemPress(1);
-          }}
-        >
-          test
-        </SubjectItem>
+        <SubjectList />
       </SubjectListWrapper>
     </Container>
   );
