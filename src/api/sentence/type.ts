@@ -1,6 +1,6 @@
 export interface SentenceItemType {
-  id: number;
-  libraryId: number;
+  id: string;
+  libraryId: string;
   author: string;
   content: string;
 }
