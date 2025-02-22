@@ -1,11 +1,8 @@
-import {
-  useQuery,
-  UseQueryOptions,
-  UseQueryResult,
-} from '@tanstack/react-query';
+import { useQuery, UseQueryResult } from '@tanstack/react-query';
 import { API_HOST } from '../../constant';
 import { SentenceItemType } from '../type';
 import { SentenceQueryKey } from '../key';
+import { QueryOptionsType } from '../../type/queryUtilType';
 
 export type GetSentenceResponseType = SentenceItemType[];
 
@@ -18,7 +15,7 @@ const getSentenceList = async (): Promise<GetSentenceResponseType> => {
 };
 
 interface Props {
-  options?: UseQueryOptions<GetSentenceResponseType, Error>;
+  options?: QueryOptionsType<GetSentenceResponseType, Error>;
 }
 
 const useGetSentenceList = ({
