@@ -8,7 +8,7 @@ interface Props {
 const SentenceLabel = ({ author, sentence }: Props) => {
   return (
     <S.Container>
-      <S.SentenceLine>{sentence}</S.SentenceLine>
+      <S.SentenceLine numberOfLines={4}>{sentence}</S.SentenceLine>
       <S.Author>{author}</S.Author>
     </S.Container>
   );

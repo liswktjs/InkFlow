@@ -3,10 +3,12 @@ import styled from '@emotion/native';
 export const Container = styled.View`
   justify-content: center;
   align-items: center;
+  width: 100%;
+  padding: 40px;
 `;
 
 export const SentenceLine = styled.Text`
-  width: 80%;
+  width: fit-content;
   flex-wrap: wrap;
   font-size: 26px;
   text-align: center;
